@@ -526,7 +526,7 @@ function render(){
 
   document.getElementById('main-content').innerHTML=`
     <div class="section">
-      <div class="sec-title">📊 ${wLabel} 셀별 평균 평점 &amp; 1-2점 비율<span class="sec-sub">3개 셀 비교 · 아래에서 셀 선택 시 매장 테이블 변경</span></div>
+      <div class="sec-title"> ${wLabel} 셀별 평균 평점 &amp; 1-2점 비율<span class="sec-sub">3개 셀 비교 · 아래에서 셀 선택 시 매장 테이블 변경</span></div>
       <div class="chart-wrap"><canvas id="cell-chart"></canvas></div>
     </div>
     <div class="section">
@@ -534,7 +534,7 @@ function render(){
       <div class="cell-selector">${cellBtns}</div>
     </div>
     <div class="section">
-      <div class="sec-title">😀 ${wLabel} ${cell} 매장별 현황<span class="sec-sub">저평점 비율순 · 행 클릭 시 리뷰</span></div>
+      <div class="sec-title"> ${wLabel} ${cell} 매장별 현황<span class="sec-sub">저평점 비율순 · 행 클릭 시 리뷰</span></div>
       <table>
         <thead><tr><th>매장명</th><th>저평점</th><th>저평점 비율${wk!=='w1'?' (▲▼ 전주)':''}</th><th>평균 평점</th><th>리뷰</th></tr></thead>
         <tbody>${rows}</tbody>
