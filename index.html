@@ -732,6 +732,10 @@ function buildTabs(){
 }
 
 function render(){
+  // 탭 active 상태 항상 갱신
+  document.querySelectorAll('#tabs .tab').forEach(t=>{
+    t.classList.toggle('active', t.dataset.week===curWeek);
+  });
   const cfg=MONTH_CONFIG[curMonth];
   const wk=curWeek, cell=curCell;
   const prev=getPrev(wk,cfg.weeks);
